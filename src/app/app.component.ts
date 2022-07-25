@@ -9,9 +9,17 @@ import { Observable } from 'rxjs';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  item$: Observable<any>;
+  todos$: Observable<any>;
   constructor(firestore: Firestore) {
     const collect = collection(firestore, 'items');
-    this.item$ = collectionData(collect);
+    this.todos$ = collectionData(collect);
+
+    this.todos$.subscribe( (newTodo) =>{
+
+    console.log('new :', newTodo);
+
+    } );
+
+   
 }
 }
