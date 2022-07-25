@@ -10,6 +10,7 @@ import { Observable } from 'rxjs';
 })
 export class AppComponent {
   todos$: Observable<any>;
+  todos: Array<any>;
   constructor(firestore: Firestore) {
     const collect = collection(firestore, 'items');
     this.todos$ = collectionData(collect);
