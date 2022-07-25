@@ -11,7 +11,7 @@ import { Observable } from 'rxjs';
 export class AppComponent {
   item$: Observable<any>;
   constructor(firestore: Firestore) {
-    const collection = collection(firestore, 'items');
-    this.item$ = collectionData(collection);
+    const collect = collection(firestore, 'items');
+    this.item$ = collectionData(collect);
 }
 }
