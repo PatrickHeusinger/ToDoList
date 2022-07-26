@@ -4,5 +4,5 @@
 <button (click)="addTodo()">Add</button>
 
 <ul>
-    <li *ngFor="let todo of todos$ | async"> {{ todo['Name'] }} </li>
+    <li *ngFor="let todo of todos$ | async"> {{ todo['name'] }} </li>
 </ul>

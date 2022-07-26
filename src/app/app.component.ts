@@ -27,9 +27,6 @@ export class AppComponent {
 addTodo(){
   const collect = collection(this.firestore, 'todos');
   setDoc(doc(collect), {name: this.todotext});
+  this.todotext='';
 }
- 
-
-
-
 }
