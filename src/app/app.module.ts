@@ -7,6 +7,7 @@ import { provideFirestore, getFirestore } from '@angular/fire/firestore';
 import { environment } from '../environments/environment';
 import { provideAuth, getAuth } from '@angular/fire/auth';
 import { provideDatabase, getDatabase } from '@angular/fire/database'
+import { FormsModule } from '@angular/forms';
 
 
 
@@ -20,7 +21,8 @@ import { provideDatabase, getDatabase } from '@angular/fire/database'
     provideFirebaseApp(() => initializeApp(environment.firebase)),
     provideAuth(() => getAuth()),
     provideDatabase(() => getDatabase()),
-    provideFirestore(() => getFirestore())
+    provideFirestore(() => getFirestore()),
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -1,5 +1,8 @@
 <h1>ToDo</h1>
 
+<input [(ngModel)]="todotext" type="text" placeholder="Todo">
+<button (click)="addTodo()">Add</button>
+
 <ul>
-    <li *ngFor="let todo of todos"> {{ todo['name'] }} </li>
+    <li *ngFor="let todo of todos$ | async"> {{ todo['Name'] }} </li>
 </ul>
